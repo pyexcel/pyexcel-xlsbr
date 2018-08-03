@@ -38,6 +38,7 @@ CLASSIFIERS = [
 
 INSTALL_REQUIRES = [
     'pyxlsb',
+    'pyexcel-io',
 ]
 SETUP_COMMANDS = {}
 

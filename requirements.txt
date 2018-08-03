@@ -1,1 +1,2 @@
 pyxlsb
+pyexcel-io

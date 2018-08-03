@@ -6,4 +6,5 @@ current_version: "0.0.1"
 release: "0.0.1"
 dependencies:
   - pyxlsb
+  - pyexcel-io
 description: "read Microsoft Excel tm xlsb file"
