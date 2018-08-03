@@ -4,5 +4,6 @@ nick_name: "xlsb"
 version: "0.0.1"
 current_version: "0.0.1"
 release: "0.0.1"
-dependencies: []
+dependencies:
+  - pyxlsb
 description: "read Microsoft Excel tm xlsb file"
