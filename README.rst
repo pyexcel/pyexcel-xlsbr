@@ -41,7 +41,8 @@ a little bit more time in coding, documentation and writing interesting posts.
 
 Introduction
 ================================================================================
-**pyexcel-xlsbr** does read Microsoft Excel tm xlsb file.
+**pyexcel-xlsbr** does read Microsoft Excel tm xlsb file. So far, it can read data out but cannot recognize
+date time format from float datat type.
 
 
 

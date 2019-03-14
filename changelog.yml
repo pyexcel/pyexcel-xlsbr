@@ -1,0 +1,9 @@
+name: pyexcel-xlsxr
+organisation: pyexcel
+releases:
+- changes:
+  - action: first release
+    details:
+    - read data out from xlsb format but to pyexcel-io's standard
+  date: 14.03.2019
+  version: 0.5.0-rc1

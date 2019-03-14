@@ -4,5 +4,6 @@
 {%endblock%}
 
 {%block features %}
-**{{name}}** does {{description}}.
+**{{name}}** does {{description}}. So far, it can read data out but cannot recognize
+date time format from float datat type.
 {%endblock%}

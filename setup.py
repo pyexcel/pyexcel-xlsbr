@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
-import codecs
-import locale
 # Template by pypi-mobans
 import os
-import platform
 import sys
+import codecs
+import locale
+import platform
 from shutil import rmtree
 
-from setuptools import Command, find_packages, setup
+from setuptools import Command, setup, find_packages
 
 PY2 = sys.version_info[0] == 2
 PY26 = PY2 and sys.version_info[1] < 7
@@ -29,14 +29,14 @@ except (ValueError, UnicodeError, locale.Error):
 
 NAME = 'pyexcel-xlsbr'
 AUTHOR = 'C.W.'
-VERSION = '0.0.1'
+VERSION = '0.5.0-rc1'
 EMAIL = 'wangc_2011@hotmail.com'
 LICENSE = 'New BSD'
 DESCRIPTION = (
     'read Microsoft Excel tm xlsb file'
 )
 URL = 'https://github.com/pyexcel/pyexcel-xlsbr'
-DOWNLOAD_URL = '%s/archive/0.0.1.tar.gz' % URL
+DOWNLOAD_URL = '%s/archive/0.5.0-rc1.tar.gz' % URL
 FILES = ['README.rst', 'CHANGELOG.rst']
 KEYWORDS = [
     'python',
@@ -67,8 +67,8 @@ EXTRAS_REQUIRE = {
 # You do not need to read beyond this line
 PUBLISH_COMMAND = '{0} setup.py sdist bdist_wheel upload -r pypi'.format(
     sys.executable)
-GS_COMMAND = ('gs pyexcel-xlsbr v0.0.1 ' +
-              "Find 0.0.1 in changelog for more details")
+GS_COMMAND = ('gs pyexcel-xlsbr v0.5.0-rc1 ' +
+              "Find 0.5.0-rc1 in changelog for more details")
 NO_GS_MESSAGE = ('Automatic github release is disabled. ' +
                  'Please install gease to enable it.')
 UPLOAD_FAILED_MSG = (

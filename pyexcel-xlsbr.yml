@@ -1,9 +1,9 @@
 overrides: "pyexcel.yaml"
 name: "pyexcel-xlsbr"
 nick_name: "xlsb"
-version: "0.0.1"
-current_version: "0.0.1"
-release: "0.0.1"
+version: "0.5.0-rc1"
+current_version: "0.5.0-rc1"
+release: "0.5.0-rc1"
 dependencies:
   - pyxlsb
   - pyexcel-io

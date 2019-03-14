@@ -24,3 +24,6 @@ targets:
   - "docs/source/conf.py": "docs/source/conf.py.jj2"
   - "pyexcel_xlsbr/_version.py": version.py.jj2
   - lint.sh: lint.script.jj2
+  - output: CHANGELOG.rst
+    configuration: changelog.yml
+    template: CHANGELOG.rst.jj2
