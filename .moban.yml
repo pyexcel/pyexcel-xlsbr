@@ -23,3 +23,4 @@ targets:
   - .gitignore: gitignore.jj2
   - "docs/source/conf.py": "docs/source/conf.py.jj2"
   - "pyexcel_xlsbr/_version.py": version.py.jj2
+  - lint.sh: lint.script.jj2

@@ -12,10 +12,14 @@ from pyxlsb import open_workbook
 
 
 class XLSBSheet(SheetReader):
-    def __init__(self, sheet, auto_detect_int=True,
-                 auto_detect_float=True,
-                 auto_detect_datetime=True,
-                 **keywords):
+    def __init__(
+        self,
+        sheet,
+        auto_detect_int=True,
+        auto_detect_float=True,
+        auto_detect_datetime=True,
+        **keywords
+    ):
         SheetReader.__init__(self, sheet, **keywords)
         self.__auto_detect_int = auto_detect_int
         self.__auto_detect_float = auto_detect_float
