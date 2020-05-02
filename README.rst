@@ -3,16 +3,21 @@ pyexcel-xlsbr - Let you focus on data, instead of file formats
 ================================================================================
 
 .. image:: https://raw.githubusercontent.com/pyexcel/pyexcel.github.io/master/images/patreon.png
-   :target: https://www.patreon.com/pyexcel
-
-.. image:: https://api.bountysource.com/badge/team?team_id=288537
-   :target: https://salt.bountysource.com/teams/chfw-pyexcel
+   :target: https://www.patreon.com/chfw
 
 .. image:: https://travis-ci.org/pyexcel/pyexcel-xlsbr.svg?branch=master
    :target: http://travis-ci.org/pyexcel/pyexcel-xlsbr
 
 .. image:: https://codecov.io/gh/pyexcel/pyexcel-xlsbr/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/pyexcel/pyexcel-xlsbr
+
+.. image:: https://badge.fury.io/py/pyexcel-xlsbr.svg
+   :target: https://pypi.org/project/pyexcel-xlsbr
+
+
+.. image:: https://pepy.tech/badge/pyexcel-xlsbr/month
+   :target: https://pepy.tech/project/pyexcel-xlsbr/month
+
 
 .. image:: https://img.shields.io/gitter/room/gitterHQ/gitter.svg
    :target: https://gitter.im/pyexcel/Lobby
@@ -108,37 +113,32 @@ On Windows systems, please issue this command::
 
     > test.bat
 
-How to update test environment and update documentation
+
+Before you commit
+------------------------------
+
+Please run::
+
+    $ make format
+
+so as to beautify your code otherwise travis-ci may fail your unit test.
+
+
+And make sure you would have run moban command
 ---------------------------------------------------------
 
 Additional steps are required:
 
 #. pip install moban
-#. git clone https://github.com/moremoban/setupmobans.git # generic setup
-#. git clone https://github.com/pyexcel/pyexcel-commons.git commons
 #. make your changes in `.moban.d` directory, then issue command `moban`
+#. moban
 
-What is pyexcel-commons
----------------------------------
-
-Many information that are shared across pyexcel projects, such as: this developer guide, license info, etc. are stored in `pyexcel-commons` project.
+otherwise travis-ci may also fail your unit test.
 
 What is .moban.d
 ---------------------------------
 
 `.moban.d` stores the specific meta data for the library.
-
-Acceptance criteria
--------------------
-
-#. Has Test cases written
-#. Has all code lines tested
-#. Passes all Travis CI builds
-#. Has fair amount of documentation if your change is complex
-#. run 'make format' so as to confirm the pyexcel organisation's coding style
-#. Please update CHANGELOG.rst
-#. Please add yourself to CONTRIBUTORS.rst
-#. Agree on NEW BSD License for your contribution
 
 
 
