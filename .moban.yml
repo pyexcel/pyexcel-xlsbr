@@ -6,3 +6,4 @@ targets:
   - "tests/requirements.txt": "tests/requirements.txt"
   - "docs/source/conf.py": "docs/source/conf.py.jj2"
   - "setup.py": "custom_setup.py.jj2"
+  - .travis.yml: custom_travis.yml.jj2
