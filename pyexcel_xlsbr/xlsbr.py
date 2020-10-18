@@ -5,8 +5,6 @@
     :copyright: (c) 2018-2020 by Onni Software Ltd & its contributors
     :license: New BSD License
 """
-from collections import OrderedDict
-
 from pyexcel_io.plugin_api import IReader, ISheet, NamedContent
 from pyxlsb import open_workbook
 
