@@ -1,9 +1,9 @@
 overrides: "pyexcel.yaml"
 name: "pyexcel-xlsbr"
 nick_name: "xlsb"
-version: "0.6.0"
-current_version: "0.6.0"
-release: "0.6.0"
+version: "0.6.1"
+current_version: "0.6.1"
+release: "0.6.1"
 dependencies:
   - pyxlsb
   - pyexcel-io>=0.6.0
@@ -11,3 +11,5 @@ test_dependencies:
   - pyexcel
   - pyexcel-xls
 description: "read Microsoft Excel tm xlsb file"
+python_requires: ">=3.6"
+min_python_version: "3.6"

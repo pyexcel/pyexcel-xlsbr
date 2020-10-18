@@ -6,7 +6,7 @@ releases:
     details:
     - new style readers in line with pyexce-io 0.6.0
   date: 18.10.2020
-  version: 0.5.0-rc1
+  version: 0.6.1
 - changes:
   - action: first release
     details:
