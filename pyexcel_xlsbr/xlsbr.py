@@ -33,7 +33,7 @@ class XLSBSheet(ISheet):
 
 
 class XLSBBook(IReader):
-    def open(self, file_name, file_type, **keywords):
+    def __init__(self, file_name, file_type, **keywords):
         self._native_book = open_workbook(self._file_name)
         self.content_array = []
         for sheet_index, sheet_name in enumerate(self._native_book.sheets):
