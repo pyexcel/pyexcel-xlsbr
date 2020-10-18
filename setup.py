@@ -32,14 +32,14 @@ except (ValueError, UnicodeError, locale.Error):
 
 NAME = "pyexcel-xlsbr"
 AUTHOR = "C.W."
-VERSION = "0.5.0-rc1"
+VERSION = "0.6.0"
 EMAIL = "info@pyexcel.org"
 LICENSE = "New BSD"
 DESCRIPTION = (
     "read Microsoft Excel tm xlsb file"
 )
 URL = "https://github.com/pyexcel/pyexcel-xlsbr"
-DOWNLOAD_URL = "%s/archive/0.5.0-rc1.tar.gz" % URL
+DOWNLOAD_URL = "%s/archive/0.6.0.tar.gz" % URL
 FILES = ["README.rst", "CHANGELOG.rst"]
 KEYWORDS = [
     "python",
@@ -63,7 +63,7 @@ CLASSIFIERS = [
 
 INSTALL_REQUIRES = [
     "pyxlsb",
-    "pyexcel-io",
+    "pyexcel-io>=0.6.0",
 ]
 SETUP_COMMANDS = {}
 
@@ -72,13 +72,14 @@ EXTRAS_REQUIRE = {
 }
 # You do not need to read beyond this line
 PUBLISH_COMMAND = "{0} setup.py sdist bdist_wheel upload -r pypi".format(sys.executable)
-GS_COMMAND = ("gs pyexcel-xlsbr v0.5.0-rc1 " +
-              "Find 0.5.0-rc1 in changelog for more details")
+HERE = os.path.abspath(os.path.dirname(__file__))
+
+GS_COMMAND = ("gease pyexcel-xlsbr v0.6.0 " +
+              "Find 0.6.0 in changelog for more details")
 NO_GS_MESSAGE = ("Automatic github release is disabled. " +
                  "Please install gease to enable it.")
 UPLOAD_FAILED_MSG = (
     'Upload failed. please run "%s" yourself.' % PUBLISH_COMMAND)
-HERE = os.path.abspath(os.path.dirname(__file__))
 
 
 class PublishCommand(Command):
@@ -123,7 +124,6 @@ class PublishCommand(Command):
 SETUP_COMMANDS.update({
     "publish": PublishCommand
 })
-
 
 def has_gease():
     """

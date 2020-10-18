@@ -1,2 +1,2 @@
 pyxlsb
-pyexcel-io
+pyexcel-io>=0.6.0

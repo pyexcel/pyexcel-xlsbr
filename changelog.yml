@@ -2,6 +2,12 @@ name: pyexcel-xlsbr
 organisation: pyexcel
 releases:
 - changes:
+  - action: updated
+    details:
+    - new style readers in line with pyexce-io 0.6.0
+  date: 18.10.2020
+  version: 0.5.0-rc1
+- changes:
   - action: first release
     details:
     - read data out from xlsb format but to pyexcel-io's standard

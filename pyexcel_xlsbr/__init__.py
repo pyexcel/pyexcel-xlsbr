@@ -2,19 +2,20 @@
     pyexcel_xlsbr
     ~~~~~~~~~~~~~~~~~~~
     The lower level xlsb file format handler
-    :copyright: (c) 2018 by Onni Software Ltd & its contributors
+    :copyright: (c) 2019-2020 by Onni Software Ltd & its contributors
     :license: New BSD License
 """
 # flake8: noqa
 from pyexcel_io.io import get_data as read_data
 from pyexcel_io.io import isstream
-from pyexcel_io.plugins import IOPluginInfoChain
+from pyexcel_io.plugins import IOPluginInfoChainV2
 
 from ._version import __author__, __version__
 
 __FILE_TYPE__ = "xlsb"
 
-IOPluginInfoChain(__name__).add_a_reader(
+IOPluginInfoChainV2(__name__).add_a_reader(
+    locations=["file"],
     relative_plugin_class_path="xlsbr.XLSBBook",
     file_types=[__FILE_TYPE__],
     stream_type="binary",
