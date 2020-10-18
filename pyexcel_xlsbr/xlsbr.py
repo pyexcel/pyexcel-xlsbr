@@ -20,6 +20,7 @@ class XLSBSheet(ISheet):
         self.__auto_detect_int = auto_detect_int
         self.__auto_detect_float = auto_detect_float
         self.__auto_detect_datetime = auto_detect_datetime
+        self._native_sheet = sheet
 
     def row_iterator(self):
         return self._native_sheet.rows()
@@ -34,16 +35,17 @@ class XLSBSheet(ISheet):
 
 class XLSBBook(IReader):
     def __init__(self, file_name, file_type, **keywords):
-        self._native_book = open_workbook(self._file_name)
+        self._native_book = open_workbook(file_name)
+        self._keywords = keywords
         self.content_array = []
-        for sheet_index, sheet_name in enumerate(self._native_book.sheets):
+        for sheet_index, sheet_name in enumerate(self._native_book.sheets, 1):
             sheet = self._native_book.get_sheet(sheet_index)
             self.content_array.append(NamedContent(sheet_name, sheet))
 
-    def read_sheet_by_index(self, sheet_index):
-        sheet = self.content_array[sheet_index]
-        return self.read_sheet(sheet)
-
-    def read_sheet(self, native_sheet):
+    def read_sheet(self, sheet_index):
+        native_sheet = self.content_array[sheet_index].payload
         sheet = XLSBSheet(native_sheet, **self._keywords)
-        return {sheet.name: sheet.to_array()}
+        return sheet
+
+    def close(self):
+        self._native_book.close()
