@@ -32,14 +32,14 @@ except (ValueError, UnicodeError, locale.Error):
 
 NAME = "pyexcel-xlsbr"
 AUTHOR = "C.W."
-VERSION = "0.6.0"
+VERSION = "0.6.1"
 EMAIL = "info@pyexcel.org"
 LICENSE = "New BSD"
 DESCRIPTION = (
     "read Microsoft Excel tm xlsb file"
 )
 URL = "https://github.com/pyexcel/pyexcel-xlsbr"
-DOWNLOAD_URL = "%s/archive/0.6.0.tar.gz" % URL
+DOWNLOAD_URL = "%s/archive/0.6.1.tar.gz" % URL
 FILES = ["README.rst", "CHANGELOG.rst"]
 KEYWORDS = [
     "python",
@@ -49,17 +49,18 @@ CLASSIFIERS = [
     "Topic :: Software Development :: Libraries",
     "Programming Language :: Python",
     "Intended Audience :: Developers",
-    "Programming Language :: Python :: 2.6",
-    "Programming Language :: Python :: 2.7",
-    "Programming Language :: Python :: 3.3",
-    "Programming Language :: Python :: 3.4",
-    "Programming Language :: Python :: 3.5",
+
+    "Programming Language :: Python :: 3 :: Only",
+
+
+
     "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
 
 ]
 
+PYTHON_REQUIRES = ">=3.6"
 
 INSTALL_REQUIRES = [
     "pyxlsb",
@@ -74,8 +75,8 @@ EXTRAS_REQUIRE = {
 PUBLISH_COMMAND = "{0} setup.py sdist bdist_wheel upload -r pypi".format(sys.executable)
 HERE = os.path.abspath(os.path.dirname(__file__))
 
-GS_COMMAND = ("gease pyexcel-xlsbr v0.6.0 " +
-              "Find 0.6.0 in changelog for more details")
+GS_COMMAND = ("gease pyexcel-xlsbr v0.6.1 " +
+              "Find 0.6.1 in changelog for more details")
 NO_GS_MESSAGE = ("Automatic github release is disabled. " +
                  "Please install gease to enable it.")
 UPLOAD_FAILED_MSG = (
@@ -193,6 +194,7 @@ if __name__ == "__main__":
         long_description=read_files(*FILES),
         license=LICENSE,
         keywords=KEYWORDS,
+        python_requires=PYTHON_REQUIRES,
         extras_require=EXTRAS_REQUIRE,
         tests_require=["nose"],
         install_requires=INSTALL_REQUIRES,

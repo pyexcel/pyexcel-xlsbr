@@ -5,11 +5,11 @@ pyexcel-xlsbr - Let you focus on data, instead of file formats
 .. image:: https://raw.githubusercontent.com/pyexcel/pyexcel.github.io/master/images/patreon.png
    :target: https://www.patreon.com/chfw
 
-.. image:: https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg
+.. image:: https://raw.githubusercontent.com/pyexcel/pyexcel-mobans/master/images/awesome-badge.svg
    :target: https://awesome-python.com/#specific-formats-processing
 
-.. image:: https://travis-ci.org/pyexcel/pyexcel-xlsbr.svg?branch=master
-   :target: http://travis-ci.org/pyexcel/pyexcel-xlsbr
+.. image:: https://github.com/pyexcel/pyexcel-xlsbr/workflows/run_tests/badge.svg
+   :target: http://github.com/pyexcel/pyexcel-xlsbr/actions
 
 .. image:: https://codecov.io/gh/pyexcel/pyexcel-xlsbr/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/pyexcel/pyexcel-xlsbr
@@ -19,7 +19,7 @@ pyexcel-xlsbr - Let you focus on data, instead of file formats
 
 
 .. image:: https://pepy.tech/badge/pyexcel-xlsbr/month
-   :target: https://pepy.tech/project/pyexcel-xlsbr/month
+   :target: https://pepy.tech/project/pyexcel-xlsbr
 
 
 .. image:: https://img.shields.io/gitter/room/gitterHQ/gitter.svg
